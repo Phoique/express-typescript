@@ -21,7 +21,7 @@ app.engine('hbs', settings.engine);
 app.set('view engine', 'hbs');
 
 // Static file
-// app.use('/static', express.static('public'));
+app.use('/static', express.static(path.join(__dirname, "public")));
 
 // Route 
 app.use(routes);
