@@ -2,6 +2,7 @@ import express, { Application } from "express";
 import dotenv from 'dotenv';
 import hbsExpress from 'express-handlebars';
 import path from 'path';
+import bodyParser from 'body-parser';
 
 import routes from './routes/index';
 
@@ -19,6 +20,10 @@ const settings = hbsExpress.create({
 });
 app.engine('hbs', settings.engine);
 app.set('view engine', 'hbs');
+
+// Body Parser
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // Static file
 app.use('/static', express.static(path.join(__dirname, "public")));
