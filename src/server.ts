@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import hbsExpress from 'express-handlebars';
 import path from 'path';
 import bodyParser from 'body-parser';
+import session from 'express-session';
 
 import routes from './routes/index';
 
@@ -27,6 +28,16 @@ app.use(bodyParser.json());
 
 // Static file
 app.use('/static', express.static(path.join(__dirname, "public")));
+
+// Session settings
+app.use(session({
+  secret: process.env.SECRET_KEY,
+  cookie: {
+    maxAge: 60000
+  },
+  saveUninitialized: true,
+  resave: true
+}));
 
 // Route 
 app.use(routes);

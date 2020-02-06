@@ -5,7 +5,16 @@ function index(request: Request, response: Response) {
 }
 
 function post(request: Request, response: Response) {
-  console.log(request.body);
+  const defaultUsername: string = 'admin';
+  const username: string = request.body.username;
+  if(defaultUsername === username) {
+    request.session.username = username;
+    request.session.role = 'admin';
+    response.redirect('/profile');
+  }
+  else {
+    response.redirect('/login');
+  }
 }
 
 export { index, post };
