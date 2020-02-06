@@ -31,5 +31,7 @@ app.use('/static', express.static(path.join(__dirname, "public")));
 // Route 
 app.use(routes);
 
-app.listen(process.env.PORT, () => 
-  console.log(`http://localhost:${process.env.PORT}`));
+const port: number | string = process.env.PORT;
+
+app.listen(port, () =>
+  console.log(`http://localhost:${port}`));
