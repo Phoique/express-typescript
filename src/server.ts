@@ -1,4 +1,4 @@
-import express, { Application } from "express";
+import express, { Application } from 'express';
 import dotenv from 'dotenv';
 import hbsExpress from 'express-handlebars';
 import path from 'path';
@@ -14,7 +14,7 @@ const app: Application = express();
 dotenv.config();
 
 // view settings
-app.set("views", path.join(__dirname, "../views"));
+app.set('views', path.join(__dirname, '../views'));
 const settings = hbsExpress.create({
   defaultLayout: 'layout', 
   extname: 'hbs'
@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Static file
-app.use('/static', express.static(path.join(__dirname, "public")));
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 // Session settings
 app.use(session({

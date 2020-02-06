@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 
-function indexError(request: Request, response: Response, next: NextFunction) {
+function indexError(request: Request, response: Response) {
   return response.status(404).render('error/404');
 }
 

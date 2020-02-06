@@ -9,6 +9,7 @@
     "build": "tsc",
     "watch-ts": "tsc -w",
     "copy-static-assets": "ts-node copyStaticAssets.ts",
+    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "test": ""
   },
   "repository": {
@@ -34,6 +35,9 @@
     "@types/express-session": "^1.15.16",
     "@types/node": "^13.7.0",
     "@types/shelljs": "^0.8.6",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "eslint": "^6.8.0",
     "nodemon": "^2.0.2",
     "shelljs": "^0.8.3",
     "ts-node": "^8.6.2",
