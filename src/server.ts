@@ -30,8 +30,10 @@ app.use(bodyParser.json());
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 // Session settings
+const secretKey: string = process.env.SECRET_KEY || 'secret123';
+
 app.use(session({
-  secret: process.env.SECRET_KEY,
+  secret: secretKey,
   cookie: {
     maxAge: 60000
   },
@@ -42,7 +44,7 @@ app.use(session({
 // Route 
 app.use(routes);
 
-const port: number | string = process.env.PORT;
+const port: number | string = process.env.PORT || 3000;
 
 app.listen(port, () =>
   console.log(`http://localhost:${port}`));
