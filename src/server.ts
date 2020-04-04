@@ -7,6 +7,8 @@ import session from 'express-session';
 
 import routes from './routes/index';
 
+import './entity';
+
 // Express app
 const app: Application = express();
 
