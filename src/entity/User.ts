@@ -1,6 +1,7 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, Unique } from 'typeorm';
 
 @Entity()
+@Unique(['username'])
 export class User {
 
   @PrimaryGeneratedColumn()
@@ -9,7 +10,7 @@ export class User {
   @Column({ type: 'int', nullable: false })
   role: number;
 
-  @Column({ type: 'text', nullable: false })
+  @Column({ nullable: false })
   username: string;
 
   @Column({ type: 'text', nullable: false })
