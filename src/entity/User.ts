@@ -9,9 +9,9 @@ export class User {
   @Column({ type: 'int', nullable: false })
   role: number;
 
-  @Column({ type: 'text', unique: true, nullable: false })
+  @Column({ type: 'text', nullable: false })
   username: string;
 
-  @Column({ type: 'string', nullable: false })
+  @Column({ type: 'text', nullable: false })
   password: string;
 }
