@@ -8,7 +8,7 @@ export default class User {
   id: number;
 
   @Column({ type: 'int', nullable: false })
-  role: number;
+  role_id: number;
 
   @Column({ nullable: false })
   username: string;
