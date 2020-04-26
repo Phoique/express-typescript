@@ -34,18 +34,18 @@
     "typeorm": "^0.2.24"
   },
   "devDependencies": {
-    "@types/express": "^4.17.4",
-    "@types/express-handlebars": "^3.1.0",
-    "@types/express-session": "^1.17.0",
-    "@types/node": "^13.11.0",
-    "@types/shelljs": "^0.8.7",
-    "@typescript-eslint/eslint-plugin": "^2.26.0",
-    "@typescript-eslint/parser": "^2.26.0",
-    "eslint": "^6.8.0",
-    "nodemon": "^2.0.2",
-    "shelljs": "^0.8.3",
-    "ts-node": "^8.8.1",
-    "tsconfig-paths": "^3.9.0",
-    "typescript": "^3.8.3"
+    "@types/express": "4.17.6",
+    "@types/express-handlebars": "3.1.0",
+    "@types/express-session": "1.17.0",
+    "@types/node": "13.13.3",
+    "@types/shelljs": "0.8.7",
+    "@typescript-eslint/eslint-plugin": "2.29.0",
+    "@typescript-eslint/parser": "2.29.0",
+    "eslint": "6.8.0",
+    "nodemon": "2.0.3",
+    "shelljs": "0.8.4",
+    "ts-node": "8.9.1",
+    "tsconfig-paths": "3.9.0",
+    "typescript": "3.8.3"
   }
 }
