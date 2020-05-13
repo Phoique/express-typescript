@@ -7,9 +7,6 @@ import session from 'express-session';
 
 import routes from './routes/index';
 
-// Datebase connection.
-import './helpers/datebase';
-
 // Express app
 const app: Application = express();
 
